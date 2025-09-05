@@ -24,10 +24,14 @@ public class Producto {
     @Column(nullable = false, precision = 10, scale = 2)
     private BigDecimal precio;
 
+    // RELACIÓN: muchos productos -> una categoría
+    // FK: categoria_id
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "categoria_id")
     private Categoria categoria;
 
+    // RELACIÓN: un producto -> un inventario
+    // mappedBy indica que el dueño es Inventario.producto
     @OneToOne(mappedBy = "producto", cascade = CascadeType.ALL)
     private Inventario inventario;
 }
