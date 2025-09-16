@@ -1,8 +1,7 @@
-package com.TP6.microservices_system.data_service.service;
-
-import com.TP6.microservices_system.data_service.entity.Inventario;
-import com.TP6.microservices_system.data_service.exception.InventarioNoEncontradoException;
-import com.TP6.microservices_system.data_service.repository.InventarioRepository;
+package com.TP6.dataService.service;
+import com.TP6.dataService.entity.Inventario;
+import com.TP6.dataService.exception.InventarioNoEncontradoException;
+import com.TP6.dataService.repository.InventarioRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

@@ -1,4 +1,4 @@
-package com.TP6.microservices_system.data_service.exception;
+package com.TP6.dataService.exception;
 
 public class ProductoYaExisteException extends RuntimeException {
     public ProductoYaExisteException(String message) {
