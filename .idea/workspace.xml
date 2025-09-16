@@ -5,32 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="08bee568-14cd-499c-8e05-31d51d8884e5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/businessService/src/main/java/com/TP6/businessService/client/DataServiceClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/businessService/src/main/java/com/TP6/businessService/dto/CategoriaDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/businessService/src/main/java/com/TP6/businessService/dto/InventarioDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/businessService/src/main/java/com/TP6/businessService/dto/ProductoDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/businessService/src/main/java/com/TP6/businessService/dto/ProductoRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/businessService/src/main/java/com/TP6/businessService/exception/MicroserviceCommunicationException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/businessService/src/main/java/com/TP6/businessService/exception/ProductoNoEncontradoException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/businessService/src/main/java/com/TP6/businessService/exception/ValidacionNegocioException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/businessService/src/main/java/com/TP6/businessService/service/CategoriaBusinessService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/businessService/src/main/java/com/TP6/businessService/service/InventarioBusinessService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/businessService/src/main/java/com/TP6/businessService/service/ProductoBusinessService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataService/src/main/java/com/TP6/dataService/entity/Categoria.java" beforeDir="false" afterPath="$PROJECT_DIR$/dataService/src/main/java/com/TP6/dataService/entity/Categoria.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataService/src/main/java/com/TP6/dataService/entity/Inventario.java" beforeDir="false" afterPath="$PROJECT_DIR$/dataService/src/main/java/com/TP6/dataService/entity/Inventario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataService/src/main/java/com/TP6/dataService/entity/Producto.java" beforeDir="false" afterPath="$PROJECT_DIR$/dataService/src/main/java/com/TP6/dataService/entity/Producto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataService/src/main/java/com/TP6/dataService/exception/CategoriaNoEncontradaException.java" beforeDir="false" afterPath="$PROJECT_DIR$/dataService/src/main/java/com/TP6/dataService/exception/CategoriaNoEncontradaException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataService/src/main/java/com/TP6/dataService/exception/CategoriaYaExisteException.java" beforeDir="false" afterPath="$PROJECT_DIR$/dataService/src/main/java/com/TP6/dataService/exception/CategoriaYaExisteException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataService/src/main/java/com/TP6/dataService/exception/InventarioNoEncontradoException.java" beforeDir="false" afterPath="$PROJECT_DIR$/dataService/src/main/java/com/TP6/dataService/exception/InventarioNoEncontradoException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataService/src/main/java/com/TP6/dataService/exception/ProductoNoEncontradoException.java" beforeDir="false" afterPath="$PROJECT_DIR$/dataService/src/main/java/com/TP6/dataService/exception/ProductoNoEncontradoException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataService/src/main/java/com/TP6/dataService/exception/ProductoYaExisteException.java" beforeDir="false" afterPath="$PROJECT_DIR$/dataService/src/main/java/com/TP6/dataService/exception/ProductoYaExisteException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataService/src/main/java/com/TP6/dataService/repository/CategoriaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/dataService/src/main/java/com/TP6/dataService/repository/CategoriaRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataService/src/main/java/com/TP6/dataService/repository/InventarioRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/dataService/src/main/java/com/TP6/dataService/repository/InventarioRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataService/src/main/java/com/TP6/dataService/repository/ProductoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/dataService/src/main/java/com/TP6/dataService/repository/ProductoRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataService/src/main/java/com/TP6/dataService/service/CategoriaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/dataService/src/main/java/com/TP6/dataService/service/CategoriaService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataService/src/main/java/com/TP6/dataService/service/InventarioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/dataService/src/main/java/com/TP6/dataService/service/InventarioService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataService/src/main/java/com/TP6/dataService/service/ProductoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/dataService/src/main/java/com/TP6/dataService/service/ProductoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/businessService/src/main/java/com/TP6/businessService/dto/CategoriaDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/businessService/src/main/java/com/TP6/businessService/dto/CategoriaDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/businessService/src/main/java/com/TP6/businessService/dto/InventarioDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/businessService/src/main/java/com/TP6/businessService/dto/InventarioDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/businessService/src/main/java/com/TP6/businessService/dto/ProductoDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/businessService/src/main/java/com/TP6/businessService/dto/ProductoDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/businessService/src/main/java/com/TP6/businessService/dto/ProductoRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/businessService/src/main/java/com/TP6/businessService/dto/ProductoRequest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +85,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1758036392953</updated>
-      <workItem from="1758036394483" duration="7982000" />
+      <workItem from="1758036394483" duration="9323000" />
     </task>
     <servers />
   </component>
