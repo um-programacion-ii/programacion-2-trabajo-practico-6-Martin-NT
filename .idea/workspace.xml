@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="08bee568-14cd-499c-8e05-31d51d8884e5" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservices-system/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservices-system/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservices-system/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservices-system/compose.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservices-system/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservices-system/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservices-system/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservices-system/src/main/java/com/TP6/microservices_system/Tp6Application.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservices-system/src/main/java/com/TP6/microservices_system/data_service/entity/Categoria.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservices-system/src/main/java/com/TP6/microservices_system/data_service/entity/Inventario.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservices-system/src/main/java/com/TP6/microservices_system/data_service/entity/Producto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservices-system/src/main/java/com/TP6/microservices_system/data_service/exception/CategoriaNoEncontradaException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservices-system/src/main/java/com/TP6/microservices_system/data_service/exception/CategoriaYaExisteException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservices-system/src/main/java/com/TP6/microservices_system/data_service/exception/InventarioNoEncontradoException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservices-system/src/main/java/com/TP6/microservices_system/data_service/exception/ProductoNoEncontradoException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservices-system/src/main/java/com/TP6/microservices_system/data_service/exception/ProductoYaExisteException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservices-system/src/main/java/com/TP6/microservices_system/data_service/repository/CategoriaRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservices-system/src/main/java/com/TP6/microservices_system/data_service/repository/InventarioRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservices-system/src/main/java/com/TP6/microservices_system/data_service/repository/ProductoRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservices-system/src/main/java/com/TP6/microservices_system/data_service/service/CategoriaService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservices-system/src/main/java/com/TP6/microservices_system/data_service/service/InventarioService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservices-system/src/main/java/com/TP6/microservices_system/data_service/service/ProductoService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservices-system/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservices-system/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservices-system/src/test/java/com/example/TP6/TestTp6Application.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservices-system/src/test/java/com/example/TP6/TestcontainersConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservices-system/src/test/java/com/example/TP6/Tp6ApplicationTests.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 5
+}]]></component>
+  <component name="ProjectId" id="32mr3x7391pz1kgl4O9hy0DZJfB" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "fix/estructura-proyecto",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/marteen/Documentos/UM/Programacion-II/programacion-2-trabajo-practico-6-Martin-NT",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager" selected="Spring Boot.BusinessServiceApplication">
+    <configuration name="BusinessServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="businessService" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.TP6.businessService.BusinessServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DataServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="dataService" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.TP6.dataService.DataServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.23892.409" />
+        <option value="bundled-js-predefined-d6986cc7102b-e03c56caf84a-JavaScript-IU-252.23892.409" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="08bee568-14cd-499c-8e05-31d51d8884e5" name="Changes" comment="" />
+      <created>1758036392953</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1758036392953</updated>
+      <workItem from="1758036394483" duration="631000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
