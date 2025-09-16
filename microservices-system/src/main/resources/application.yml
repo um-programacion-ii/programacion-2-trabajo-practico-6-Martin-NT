@@ -1,0 +1,6 @@
+server:
+  port: 8082   # Puerto del business-service, distinto al data-service
+
+data:
+  service:
+    url: http://localhost:8081   # URL donde corre tu data-service
