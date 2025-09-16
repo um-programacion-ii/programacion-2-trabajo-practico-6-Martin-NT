@@ -11,9 +11,6 @@ public interface CategoriaRepository extends JpaRepository<Categoria, Long> {
     // Buscar categoría por nombre exacto
     Optional<Categoria> findByNombre(String nombre);
 
-    // Verificar existencia ignorando mayúsculas/minúsculas (evita duplicados)
-    boolean existsByNombreEqualsIgnoreCase(String nombre);
-
     // JPQL: categorías que tienen al menos un producto asociado
     @Query("SELECT c FROM Categoria c WHERE SIZE(c.productos) > 0")
     List<Categoria> findCategoriasConProductos();

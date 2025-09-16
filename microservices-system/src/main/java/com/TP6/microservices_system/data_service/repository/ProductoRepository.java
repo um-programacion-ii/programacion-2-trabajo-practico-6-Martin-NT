@@ -16,9 +16,6 @@ public interface ProductoRepository extends JpaRepository<Producto, Long> {
     // Buscar productos por precio exacto (puede haber más de uno con el mismo precio)
     List<Producto> findByPrecio(BigDecimal precio);
 
-    // Verificar existencia de un producto por nombre (ignora mayúsculas/minúsculas)
-    boolean existsByNombreIgnoreCase(String nombre);
-
     // JPQL: Buscar productos por nombre de la categoría
     @Query("SELECT p FROM Producto p WHERE p.categoria.nombre = :nombreCategoria")
     List<Producto> findByNombreCategoria(@Param("nombreCategoria") String nombreCategoria);
