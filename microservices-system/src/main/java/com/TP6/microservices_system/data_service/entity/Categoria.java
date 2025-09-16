@@ -22,6 +22,8 @@ public class Categoria {
     @Column(length = 500)
     private String descripcion;
 
+    // RELACIÓN: una categoría -> muchos productos
+    // mappedBy apunta al campo 'categoria' en Producto
     @OneToMany(mappedBy = "categoria", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Producto> productos = new ArrayList<>();
 }
