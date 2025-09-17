@@ -1,5 +1,5 @@
-package com.TP6.microservices_system.data_service.repository;
-import com.TP6.microservices_system.data_service.entity.Inventario;
+package com.TP6.dataService.repository;
+import com.TP6.dataService.entity.Inventario;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
