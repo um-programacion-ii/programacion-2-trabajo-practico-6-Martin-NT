@@ -1,9 +1,8 @@
-package com.TP6.microservices_system.data_service.service;
-
-import com.TP6.microservices_system.data_service.entity.Producto;
-import com.TP6.microservices_system.data_service.exception.ProductoNoEncontradoException;
-import com.TP6.microservices_system.data_service.exception.ProductoYaExisteException;
-import com.TP6.microservices_system.data_service.repository.ProductoRepository;
+package com.TP6.dataService.service;
+import com.TP6.dataService.entity.Producto;
+import com.TP6.dataService.exception.ProductoNoEncontradoException;
+import com.TP6.dataService.exception.ProductoYaExisteException;
+import com.TP6.dataService.repository.ProductoRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

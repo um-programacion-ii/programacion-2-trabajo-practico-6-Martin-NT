@@ -1,13 +1,12 @@
-package com.TP6.microservices_system.data_service.service;
+package com.TP6.dataService.service;
+import com.TP6.dataService.entity.Categoria;
+import com.TP6.dataService.repository.CategoriaRepository;
+import com.TP6.dataService.exception.CategoriaNoEncontradaException;
+import com.TP6.dataService.exception.CategoriaYaExisteException;
 
-import com.TP6.microservices_system.data_service.entity.Categoria;
-import com.TP6.microservices_system.data_service.exception.CategoriaNoEncontradaException;
-import com.TP6.microservices_system.data_service.exception.CategoriaYaExisteException;
-import com.TP6.microservices_system.data_service.repository.CategoriaRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.math.BigDecimal;
 import java.util.List;
 
 @Service

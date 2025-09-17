@@ -5,69 +5,54 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="08bee568-14cd-499c-8e05-31d51d8884e5" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservices-system/.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservices-system/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservices-system/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservices-system/compose.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservices-system/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservices-system/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservices-system/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservices-system/src/main/java/com/TP6/microservices_system/Tp6Application.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservices-system/src/main/java/com/TP6/microservices_system/data_service/entity/Categoria.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservices-system/src/main/java/com/TP6/microservices_system/data_service/entity/Inventario.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservices-system/src/main/java/com/TP6/microservices_system/data_service/entity/Producto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservices-system/src/main/java/com/TP6/microservices_system/data_service/exception/CategoriaNoEncontradaException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservices-system/src/main/java/com/TP6/microservices_system/data_service/exception/CategoriaYaExisteException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservices-system/src/main/java/com/TP6/microservices_system/data_service/exception/InventarioNoEncontradoException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservices-system/src/main/java/com/TP6/microservices_system/data_service/exception/ProductoNoEncontradoException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservices-system/src/main/java/com/TP6/microservices_system/data_service/exception/ProductoYaExisteException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservices-system/src/main/java/com/TP6/microservices_system/data_service/repository/CategoriaRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservices-system/src/main/java/com/TP6/microservices_system/data_service/repository/InventarioRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservices-system/src/main/java/com/TP6/microservices_system/data_service/repository/ProductoRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservices-system/src/main/java/com/TP6/microservices_system/data_service/service/CategoriaService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservices-system/src/main/java/com/TP6/microservices_system/data_service/service/InventarioService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservices-system/src/main/java/com/TP6/microservices_system/data_service/service/ProductoService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservices-system/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservices-system/src/main/resources/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservices-system/src/test/java/com/example/TP6/TestTp6Application.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservices-system/src/test/java/com/example/TP6/TestcontainersConfiguration.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservices-system/src/test/java/com/example/TP6/Tp6ApplicationTests.java" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/businessService/src/main/java/com/TP6/businessService/exception/CategoriaNoEncontradaException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/businessService/src/main/java/com/TP6/businessService/exception/InventarioNoEncontradoException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/businessService/src/main/java/com/TP6/businessService/client/DataServiceClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/businessService/src/main/java/com/TP6/businessService/client/DataServiceClient.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+        <option value="Exception" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 5
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="32mr3x7391pz1kgl4O9hy0DZJfB" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "fix/estructura-proyecto",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/marteen/Documentos/UM/Programacion-II/programacion-2-trabajo-practico-6-Martin-NT",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/business-services&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/marteen/Documentos/UM/Programacion-II/programacion-2-trabajo-practico-6-Martin-NT&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Spring Boot.BusinessServiceApplication">
     <configuration name="BusinessServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="businessService" />
@@ -99,7 +84,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1758036392953</updated>
-      <workItem from="1758036394483" duration="631000" />
+      <workItem from="1758036394483" duration="11016000" />
+      <workItem from="1758143090250" duration="3467000" />
     </task>
     <servers />
   </component>

@@ -1,4 +1,4 @@
-package com.TP6.microservices_system.data_service.entity;
+package com.TP6.dataService.entity;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
