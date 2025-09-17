@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: business-service
+
+server:
+  port: 8082
+
+data:
+  service:
+    url: http://localhost:8081
