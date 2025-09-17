@@ -5,11 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="08bee568-14cd-499c-8e05-31d51d8884e5" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/businessService/src/main/java/com/TP6/businessService/exception/CategoriaNoEncontradaException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/businessService/src/main/java/com/TP6/businessService/exception/InventarioNoEncontradoException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/businessService/src/main/java/com/TP6/businessService/dto/CategoriaDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/businessService/src/main/java/com/TP6/businessService/dto/CategoriaDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/businessService/src/main/java/com/TP6/businessService/dto/InventarioDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/businessService/src/main/java/com/TP6/businessService/dto/InventarioDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/businessService/src/main/java/com/TP6/businessService/dto/ProductoDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/businessService/src/main/java/com/TP6/businessService/dto/ProductoDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/businessService/src/main/java/com/TP6/businessService/dto/ProductoRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/businessService/src/main/java/com/TP6/businessService/dto/ProductoRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/businessService/src/main/java/com/TP6/businessService/client/DataServiceClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/businessService/src/main/java/com/TP6/businessService/client/DataServiceClient.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,9 +18,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Exception" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
+        <option value="Exception" />
       </list>
     </option>
   </component>
@@ -37,23 +36,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "feature/feign-client",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/marteen/Documentos/UM/Programacion-II/programacion-2-trabajo-practico-6-Martin-NT",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/business-services&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/marteen/Documentos/UM/Programacion-II/programacion-2-trabajo-practico-6-Martin-NT&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Spring Boot.BusinessServiceApplication">
     <configuration name="BusinessServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="businessService" />
@@ -85,7 +84,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1758036392953</updated>
-      <workItem from="1758036394483" duration="9323000" />
+      <workItem from="1758036394483" duration="11016000" />
+      <workItem from="1758143090250" duration="3467000" />
     </task>
     <servers />
   </component>
