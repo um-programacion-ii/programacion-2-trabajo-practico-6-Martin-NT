@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: business-service
+  profiles:
+    active: dev
