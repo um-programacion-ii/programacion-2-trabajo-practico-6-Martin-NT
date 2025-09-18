@@ -122,4 +122,28 @@ public class ProductoBusinessService {
             throw new ValidacionNegocioException("El stock no puede ser negativo");
         }
     }
+
+    // Obtener productos con stock bajo
+    public List<ProductoDTO> obtenerProductosConStockBajo() {
+        try {
+            return dataServiceClient.obtenerProductosConStockBajo();
+        } catch (FeignException e) {
+            log.error("Error al obtener productos con stock bajo del data-service", e);
+            throw new MicroserviceCommunicationException("Error de comunicación con el servicio de datos");
+        }
+    }
+
+    // Calcular el valor total del inventario
+    public BigDecimal calcularValorTotalInventario() {
+        try {
+            List<ProductoDTO> productos = dataServiceClient.obtenerTodosLosProductos();
+            return productos.stream()
+                    .map(p -> p.getPrecio().multiply(BigDecimal.valueOf(p.getStock())))
+                    .reduce(BigDecimal.ZERO, BigDecimal::add);
+        } catch (FeignException e) {
+            log.error("Error al calcular valor total del inventario desde data-service", e);
+            throw new MicroserviceCommunicationException("Error de comunicación con el servicio de datos");
+        }
+    }
+
 }
