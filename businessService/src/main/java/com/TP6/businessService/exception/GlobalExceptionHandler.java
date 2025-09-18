@@ -53,4 +53,15 @@ public class GlobalExceptionHandler {
                 status
         );
     }
+
+    @ExceptionHandler(ProductoNoEncontradoException.class)
+    public ResponseEntity<ErrorResponse> handleProductoNoEncontrado(ProductoNoEncontradoException ex) {
+        return buildResponse(HttpStatus.NOT_FOUND, ex.getMessage());
+    }
+
+    @ExceptionHandler(InventarioNoEncontradoException.class)
+    public ResponseEntity<ErrorResponse> handleInventarioNoEncontrado(InventarioNoEncontradoException ex) {
+        return buildResponse(HttpStatus.NOT_FOUND, ex.getMessage());
+    }
+
 }
