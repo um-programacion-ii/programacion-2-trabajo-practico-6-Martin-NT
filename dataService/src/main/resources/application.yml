@@ -1,5 +1,5 @@
 spring:
   application:
-    name: business-service
+    name: data-service
   profiles:
     active: dev
