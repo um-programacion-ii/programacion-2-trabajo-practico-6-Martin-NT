@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="08bee568-14cd-499c-8e05-31d51d8884e5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/businessService/src/test/java/com/TP6/businessService/controller/BusinessControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dataService/src/test/java/com/TP6/dataService/controller/DataControllerIntegrationTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataService/src/test/java/com/TP6/dataService/service/CategoriaServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataService/src/test/java/com/TP6/dataService/service/InventarioServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataService/src/test/java/com/TP6/dataService/service/ProductoServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/businessService/src/main/java/com/TP6/businessService/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/businessService/src/main/java/com/TP6/businessService/exception/GlobalExceptionHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,12 +46,13 @@
     "JUnit.DataControllerIntegrationTest.executor": "Run",
     "JUnit.InventarioBusinessServiceTest.executor": "Run",
     "JUnit.ProductoBusinessServiceTest.executor": "Run",
+    "JUnit.ProductoServiceTest.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "feature/business-service-tests",
+    "git-widget-placeholder": "feature/data-service-tests",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/home/marteen/Documentos/UM/Programacion-II/programacion-2-trabajo-practico-6-Martin-NT",
     "node.js.detected.package.eslint": "true",
@@ -67,7 +68,7 @@
       <recent name="$PROJECT_DIR$/dataService/src/main/resources" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.DataControllerIntegrationTest">
+  <component name="RunManager" selected="JUnit.InventarioServiceTest">
     <configuration name="BusinessControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="businessService" />
       <extension name="coverage">
@@ -83,16 +84,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CategoriaBusinessServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="businessService" />
+    <configuration name="CategoriaServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="dataService" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.TP6.businessService.service.*" />
+          <option name="PATTERN" value="com.TP6.dataService.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.TP6.businessService.service" />
-      <option name="MAIN_CLASS_NAME" value="com.TP6.businessService.service.CategoriaBusinessServiceTest" />
+      <option name="PACKAGE_NAME" value="com.TP6.dataService.service" />
+      <option name="MAIN_CLASS_NAME" value="com.TP6.dataService.service.CategoriaServiceTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -113,31 +114,31 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="InventarioBusinessServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="businessService" />
+    <configuration name="InventarioServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="dataService" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.TP6.businessService.service.*" />
+          <option name="PATTERN" value="com.TP6.dataService.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.TP6.businessService.service" />
-      <option name="MAIN_CLASS_NAME" value="com.TP6.businessService.service.InventarioBusinessServiceTest" />
+      <option name="PACKAGE_NAME" value="com.TP6.dataService.service" />
+      <option name="MAIN_CLASS_NAME" value="com.TP6.dataService.service.InventarioServiceTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProductoBusinessServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="businessService" />
+    <configuration name="ProductoServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="dataService" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.TP6.businessService.service.*" />
+          <option name="PATTERN" value="com.TP6.dataService.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.TP6.businessService.service" />
-      <option name="MAIN_CLASS_NAME" value="com.TP6.businessService.service.ProductoBusinessServiceTest" />
+      <option name="PACKAGE_NAME" value="com.TP6.dataService.service" />
+      <option name="MAIN_CLASS_NAME" value="com.TP6.dataService.service.ProductoServiceTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -159,11 +160,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.InventarioServiceTest" />
+        <item itemvalue="JUnit.CategoriaServiceTest" />
+        <item itemvalue="JUnit.ProductoServiceTest" />
         <item itemvalue="JUnit.DataControllerIntegrationTest" />
         <item itemvalue="JUnit.BusinessControllerTest" />
-        <item itemvalue="JUnit.InventarioBusinessServiceTest" />
-        <item itemvalue="JUnit.CategoriaBusinessServiceTest" />
-        <item itemvalue="JUnit.ProductoBusinessServiceTest" />
       </list>
     </recent_temporary>
   </component>
@@ -185,7 +186,7 @@
       <workItem from="1758036394483" duration="11016000" />
       <workItem from="1758143090250" duration="11400000" />
       <workItem from="1758204365864" duration="7370000" />
-      <workItem from="1758226301508" duration="5492000" />
+      <workItem from="1758226301508" duration="6708000" />
     </task>
     <servers />
   </component>
