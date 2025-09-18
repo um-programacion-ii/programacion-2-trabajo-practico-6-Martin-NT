@@ -6,7 +6,6 @@ import com.TP6.dataService.entity.Producto;
 import com.TP6.dataService.service.CategoriaService;
 import com.TP6.dataService.service.InventarioService;
 import com.TP6.dataService.service.ProductoService;
-import jakarta.persistence.criteria.CriteriaBuilder;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.validation.annotation.Validated;
@@ -84,6 +83,16 @@ public class DataController {
         productoService.eliminar(id);
     }
 
+    // Obtener productos con stock bajo (comparación contra stock mínimo)
+    @GetMapping("/productos/stock-bajo")
+    public List<Producto> obtenerProductosConStockBajo() {
+        return productoService.obtenerTodos()
+                .stream()
+                .filter(p -> p.getInventario() != null
+                        && p.getInventario().getCantidad() <= p.getInventario().getStockMinimo())
+                .toList();
+    }
+
     // ------------------- CATEGORÍAS -------------------
 
     // Obtener todas las categorías
@@ -158,13 +167,13 @@ public class DataController {
 
     // Obtener inventarios con stock bajo
     @GetMapping("/inventario/stock-bajo")
-    public List<Inventario> obtenerProductosConStockBajo() {
+    public List<Inventario> obtenerInventariosConStockBajo() {
         return inventarioService.buscarConStockBajo();
     }
 
     // Obtener inventarios con stock alto
     @GetMapping("/inventario/stock-alto")
-    public List<Inventario> obtenerProductosConStockAlto() {
+    public List<Inventario> obtenerInventariosConStockAlto() {
         return inventarioService.buscarConStockAlto();
     }
 
@@ -187,5 +196,4 @@ public class DataController {
     public void eliminarInventario(@PathVariable Long id) {
         inventarioService.eliminar(id);
     }
-
 }
