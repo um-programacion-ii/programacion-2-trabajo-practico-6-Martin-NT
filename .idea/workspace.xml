@@ -5,19 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="08bee568-14cd-499c-8e05-31d51d8884e5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/businessService/src/main/resources/application-dev.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/businessService/src/main/resources/application-mysql.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/businessService/src/main/resources/application-postgres.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dataService/src/main/resources/application-dev.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dataService/src/main/resources/application-mysql.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dataService/src/main/resources/application-postgres.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dataService/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/businessService/src/main/java/com/TP6/businessService/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataService/src/main/java/com/TP6/dataService/exception/GlobalExceptionHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/businessService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/businessService/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/businessService/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/businessService/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/businessService/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataService/src/main/resources/application.properties" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +27,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="Security Analysis" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -54,7 +44,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "feature/profiles",
+    "git-widget-placeholder": "feature/global-exception-handler",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/home/marteen/Documentos/UM/Programacion-II/programacion-2-trabajo-practico-6-Martin-NT",
     "node.js.detected.package.eslint": "true",
@@ -103,7 +93,7 @@
       <updated>1758036392953</updated>
       <workItem from="1758036394483" duration="11016000" />
       <workItem from="1758143090250" duration="11400000" />
-      <workItem from="1758204365864" duration="6236000" />
+      <workItem from="1758204365864" duration="6998000" />
     </task>
     <servers />
   </component>
