@@ -5,9 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="08bee568-14cd-499c-8e05-31d51d8884e5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/dataService/src/main/java/com/TP6/dataService/controller/DataController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/businessService/src/main/java/com/TP6/businessService/controller/BusinessController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dataService/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/businessService/src/main/java/com/TP6/businessService/client/DataServiceClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/businessService/src/main/java/com/TP6/businessService/client/DataServiceClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/businessService/src/main/java/com/TP6/businessService/service/ProductoBusinessService.java" beforeDir="false" afterPath="$PROJECT_DIR$/businessService/src/main/java/com/TP6/businessService/service/ProductoBusinessService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataService/src/main/java/com/TP6/dataService/controller/DataController.java" beforeDir="false" afterPath="$PROJECT_DIR$/dataService/src/main/java/com/TP6/dataService/controller/DataController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +43,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "feature/data-controller",
+    "git-widget-placeholder": "feature/business-controller",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/home/marteen/Documentos/UM/Programacion-II/programacion-2-trabajo-practico-6-Martin-NT",
     "node.js.detected.package.eslint": "true",
@@ -84,7 +86,7 @@
       <option name="presentableId" value="Default" />
       <updated>1758036392953</updated>
       <workItem from="1758036394483" duration="11016000" />
-      <workItem from="1758143090250" duration="6833000" />
+      <workItem from="1758143090250" duration="11337000" />
     </task>
     <servers />
   </component>

@@ -29,7 +29,6 @@ public interface DataServiceClient {
     @GetMapping("/data/productos/categoria/{nombre}")
     List<ProductoDTO> obtenerProductosPorCategoria(@PathVariable String nombre);
 
-
     @PostMapping("/data/productos")
     ProductoDTO crearProducto(@RequestBody ProductoRequest request);
 
@@ -38,6 +37,9 @@ public interface DataServiceClient {
 
     @DeleteMapping("/data/productos/{id}")
     void eliminarProducto(@PathVariable Long id);
+
+    @GetMapping("/data/productos/stock-bajo")
+    List<ProductoDTO> obtenerProductosConStockBajo();
 
     // Categorías
     @GetMapping("/data/categorias")
