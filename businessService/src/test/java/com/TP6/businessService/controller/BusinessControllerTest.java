@@ -9,11 +9,13 @@ import com.TP6.businessService.exception.ProductoNoEncontradoException;
 import com.TP6.businessService.service.CategoriaBusinessService;
 import com.TP6.businessService.service.InventarioBusinessService;
 import com.TP6.businessService.service.ProductoBusinessService;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
+import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.web.servlet.MockMvc;
 
 import java.math.BigDecimal;
@@ -27,10 +29,14 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 @WebMvcTest(BusinessController.class)
+@ActiveProfiles("test")
 class BusinessControllerTest {
 
     @Autowired
     private MockMvc mockMvc;
+
+    @Autowired
+    private ObjectMapper objectMapper;
 
     @MockBean
     private ProductoBusinessService productoBusinessService;
@@ -70,8 +76,7 @@ class BusinessControllerTest {
 
         mockMvc.perform(post("/api/productos")
                         .contentType(MediaType.APPLICATION_JSON)
-                        .content("{\"nombre\":\"Coca Cola\",\"descripcion\":\"Bebida\",\"precio\":100," +
-                                "\"categoriaId\":1,\"stock\":10,\"stockMinimo\":2}"))
+                        .content(objectMapper.writeValueAsString(request)))
                 .andExpect(status().isCreated())
                 .andExpect(jsonPath("$.nombre").value("Coca Cola"))
                 .andExpect(jsonPath("$.precio").value(100));
@@ -120,7 +125,7 @@ class BusinessControllerTest {
 
         mockMvc.perform(post("/api/categorias")
                         .contentType(MediaType.APPLICATION_JSON)
-                        .content("{\"id\":1,\"nombre\":\"Bebidas\",\"descripcion\":\"Productos líquidos\"}"))
+                        .content(objectMapper.writeValueAsString(categoria)))
                 .andExpect(status().isCreated())
                 .andExpect(jsonPath("$.nombre").value("Bebidas"));
     }
@@ -155,9 +160,7 @@ class BusinessControllerTest {
 
         mockMvc.perform(post("/api/inventario")
                         .contentType(MediaType.APPLICATION_JSON)
-                        .content("{\"id\":1,\"producto\":{\"id\":1,\"nombre\":\"Coca Cola\",\"descripcion\":\"Bebida\"," +
-                                "\"precio\":100,\"categoriaNombre\":\"Bebidas\",\"stock\":10,\"stockBajo\":false}," +
-                                "\"cantidad\":10,\"stockMinimo\":2}"))
+                        .content(objectMapper.writeValueAsString(inventario)))
                 .andExpect(status().isCreated())
                 .andExpect(jsonPath("$.cantidad").value(10))
                 .andExpect(jsonPath("$.producto.nombre").value("Coca Cola"));
