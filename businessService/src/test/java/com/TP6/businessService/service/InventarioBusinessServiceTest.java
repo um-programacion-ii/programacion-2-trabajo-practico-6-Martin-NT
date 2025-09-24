@@ -25,12 +25,12 @@ import static org.mockito.Mockito.*;
 class InventarioBusinessServiceTest {
 
     @Mock
-    private DataServiceClient dataServiceClient;
+    private DataServiceClient dataServiceClient; // Mock del cliente Feign
 
     @InjectMocks
-    private InventarioBusinessService inventarioBusinessService;
+    private InventarioBusinessService inventarioBusinessService; // Service bajo prueba
 
-    // Helper para crear un inventario con datos de prueba
+    // Helper para crear inventarios con datos de prueba
     private InventarioDTO crearInventario(Long id, int cantidad, int stockMinimo) {
         ProductoDTO producto = new ProductoDTO(
                 1L, "Producto 1", "Descripción", BigDecimal.valueOf(100), "Categoría", 10, false
@@ -38,6 +38,9 @@ class InventarioBusinessServiceTest {
         return new InventarioDTO(id, producto, cantidad, stockMinimo, LocalDateTime.now());
     }
 
+    // ------------------- TESTS OBTENER -------------------
+
+    // Caso exitoso: obtener todos los inventarios
     @Test
     void cuandoObtenerTodosLosInventarios_entoncesRetornaLista() {
         // Arrange
@@ -56,6 +59,9 @@ class InventarioBusinessServiceTest {
         verify(dataServiceClient).obtenerTodosLosInventarios();
     }
 
+    // ------------------- TESTS CREAR -------------------
+
+    // Caso exitoso: crear inventario válido
     @Test
     void cuandoCrearInventarioValido_entoncesSeCreaCorrectamente() {
         // Arrange
@@ -72,6 +78,7 @@ class InventarioBusinessServiceTest {
         verify(dataServiceClient).crearInventario(nuevo);
     }
 
+    // Caso error: cantidad negativa lanza ValidacionNegocioException
     @Test
     void cuandoCrearInventarioConCantidadNegativa_entoncesLanzaExcepcion() {
         // Arrange
@@ -82,9 +89,11 @@ class InventarioBusinessServiceTest {
             inventarioBusinessService.crearInventario(inventario);
         });
 
+        // Verificamos que NO se llama al cliente
         verify(dataServiceClient, never()).crearInventario(any());
     }
 
+    // Caso error: stock mínimo negativo lanza ValidacionNegocioException
     @Test
     void cuandoCrearInventarioConStockMinimoNegativo_entoncesLanzaExcepcion() {
         // Arrange
@@ -98,6 +107,9 @@ class InventarioBusinessServiceTest {
         verify(dataServiceClient, never()).crearInventario(any());
     }
 
+    // ------------------- TESTS BUSCAR -------------------
+
+    // Caso error: inventario por ID inexistente lanza InventarioNoEncontradoException
     @Test
     void cuandoObtenerInventarioPorIdInexistente_entoncesLanzaInventarioNoEncontradoException() {
         // Arrange
@@ -110,6 +122,7 @@ class InventarioBusinessServiceTest {
         });
     }
 
+    // Caso error: inventario por producto inexistente lanza InventarioNoEncontradoException
     @Test
     void cuandoObtenerInventarioPorProductoInexistente_entoncesLanzaInventarioNoEncontradoException() {
         // Arrange
@@ -122,6 +135,9 @@ class InventarioBusinessServiceTest {
         });
     }
 
+    // ------------------- TESTS ERRORES GENERALES -------------------
+
+    // Caso error: fallo en comunicación con data-service
     @Test
     void cuandoObtenerInventarios_yDataServiceFalla_entoncesLanzaMicroserviceCommunicationException() {
         // Arrange

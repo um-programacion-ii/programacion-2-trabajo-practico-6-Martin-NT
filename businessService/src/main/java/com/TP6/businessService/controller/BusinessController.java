@@ -84,7 +84,7 @@ public class BusinessController {
         return productoBusinessService.obtenerProductosPorCategoria(nombre);
     }
 
-// ------------------- CATEGORÍAS -------------------
+    // ------------------- CATEGORÍAS -------------------
 
     // Obtener todas las categorías
     @GetMapping("/categorias")

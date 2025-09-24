@@ -49,6 +49,7 @@ class BusinessControllerTest {
 
     // ------------------- TESTS PRODUCTOS -------------------
 
+    // Caso exitoso: obtiene lista de productos
     @Test
     void cuandoObtenerTodosLosProductos_entoncesRetornaLista() throws Exception {
         List<ProductoDTO> productos = Arrays.asList(
@@ -64,6 +65,7 @@ class BusinessControllerTest {
                 .andExpect(jsonPath("$[0].nombre").value("Coca Cola"));
     }
 
+    // Caso exitoso: crear un producto
     @Test
     void cuandoCrearProducto_entoncesRetorna201() throws Exception {
         ProductoRequest request = new ProductoRequest("Coca Cola", "Bebida",
@@ -82,6 +84,7 @@ class BusinessControllerTest {
                 .andExpect(jsonPath("$.precio").value(100));
     }
 
+    // Caso error: producto inexistente devuelve 404
     @Test
     void cuandoBuscarProductoInexistente_entoncesRetorna404() throws Exception {
         when(productoBusinessService.obtenerProductoPorId(999L))
@@ -91,6 +94,7 @@ class BusinessControllerTest {
                 .andExpect(status().isNotFound());
     }
 
+    // Caso error: falla comunicación con data-service (500)
     @Test
     void cuandoDataServiceFalla_entoncesRetorna500() throws Exception {
         when(productoBusinessService.obtenerTodosLosProductos())
@@ -102,6 +106,7 @@ class BusinessControllerTest {
 
     // ------------------- TESTS CATEGORÍAS -------------------
 
+    // Caso exitoso: obtiene lista de categorías
     @Test
     void cuandoObtenerTodasLasCategorias_entoncesRetornaLista() throws Exception {
         List<CategoriaDTO> categorias = Arrays.asList(
@@ -117,6 +122,7 @@ class BusinessControllerTest {
                 .andExpect(jsonPath("$[1].nombre").value("Snacks"));
     }
 
+    // Caso exitoso: crear categoría
     @Test
     void cuandoCrearCategoria_entoncesRetorna201() throws Exception {
         CategoriaDTO categoria = new CategoriaDTO(1L, "Bebidas", "Productos líquidos");
@@ -132,6 +138,7 @@ class BusinessControllerTest {
 
     // ------------------- TESTS INVENTARIOS -------------------
 
+    // Caso exitoso: obtiene lista de inventarios
     @Test
     void cuandoObtenerTodosLosInventarios_entoncesRetornaLista() throws Exception {
         ProductoDTO producto = new ProductoDTO(1L, "Coca Cola", "Bebida",
@@ -148,6 +155,7 @@ class BusinessControllerTest {
                 .andExpect(jsonPath("$[0].producto.nombre").value("Coca Cola"));
     }
 
+    // Caso exitoso: crear inventario
     @Test
     void cuandoCrearInventario_entoncesRetorna201() throws Exception {
         ProductoDTO producto = new ProductoDTO(1L, "Coca Cola", "Bebida",
@@ -168,6 +176,7 @@ class BusinessControllerTest {
 
     // ------------------- TESTS REPORTES -------------------
 
+    // Caso exitoso: obtiene lista de productos con stock bajo
     @Test
     void cuandoObtenerProductosConStockBajo_entoncesRetornaLista() throws Exception {
         List<ProductoDTO> productosBajos = List.of(
@@ -182,6 +191,7 @@ class BusinessControllerTest {
                 .andExpect(jsonPath("$[0].nombre").value("Pepsi"));
     }
 
+    // Caso exitoso: obtiene valor total del inventario
     @Test
     void cuandoObtenerValorTotalInventario_entoncesRetornaBigDecimal() throws Exception {
         when(productoBusinessService.calcularValorTotalInventario()).thenReturn(BigDecimal.valueOf(1500));

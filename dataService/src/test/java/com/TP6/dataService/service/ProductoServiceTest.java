@@ -23,15 +23,16 @@ import static org.mockito.Mockito.*;
 class ProductoServiceTest {
 
     @Mock
-    private ProductoRepository productoRepository;
+    private ProductoRepository productoRepository; // Simulamos el repositorio
 
     @InjectMocks
-    private ProductoService productoService;
+    private ProductoService productoService; // Service bajo prueba
 
     private Producto producto;
 
     @BeforeEach
     void setUp() {
+        // Creamos un producto de prueba
         producto = new Producto();
         producto.setId(1L);
         producto.setNombre("Coca Cola");
@@ -41,6 +42,7 @@ class ProductoServiceTest {
 
     // ------------------- GUARDAR -------------------
 
+    // Caso exitoso: guardar producto válido
     @Test
     void cuandoGuardarProductoValido_entoncesPersiste() {
         when(productoRepository.findByNombre("Coca Cola")).thenReturn(Optional.empty());
@@ -53,6 +55,7 @@ class ProductoServiceTest {
         verify(productoRepository).save(producto);
     }
 
+    // Caso error: guardar producto duplicado lanza excepción
     @Test
     void cuandoGuardarProductoDuplicado_entoncesLanzaExcepcion() {
         when(productoRepository.findByNombre("Coca Cola")).thenReturn(Optional.of(producto));
@@ -64,6 +67,7 @@ class ProductoServiceTest {
 
     // ------------------- BUSCAR -------------------
 
+    // Caso exitoso: buscar por ID existente
     @Test
     void cuandoBuscarPorIdExistente_entoncesRetornaProducto() {
         when(productoRepository.findById(1L)).thenReturn(Optional.of(producto));
@@ -74,6 +78,7 @@ class ProductoServiceTest {
         assertEquals("Coca Cola", resultado.getNombre());
     }
 
+    // Caso error: buscar por ID inexistente lanza excepción
     @Test
     void cuandoBuscarPorIdNoExistente_entoncesLanzaExcepcion() {
         when(productoRepository.findById(99L)).thenReturn(Optional.empty());
@@ -81,6 +86,7 @@ class ProductoServiceTest {
         assertThrows(ProductoNoEncontradoException.class, () -> productoService.buscarPorId(99L));
     }
 
+    // Caso exitoso: buscar por nombre existente
     @Test
     void cuandoBuscarPorNombreExistente_entoncesRetornaProducto() {
         when(productoRepository.findByNombre("Coca Cola")).thenReturn(Optional.of(producto));
@@ -91,6 +97,7 @@ class ProductoServiceTest {
         assertEquals("Coca Cola", resultado.getNombre());
     }
 
+    // Caso error: buscar por nombre inexistente lanza excepción
     @Test
     void cuandoBuscarPorNombreNoExistente_entoncesLanzaExcepcion() {
         when(productoRepository.findByNombre("Pepsi")).thenReturn(Optional.empty());
@@ -98,6 +105,7 @@ class ProductoServiceTest {
         assertThrows(ProductoNoEncontradoException.class, () -> productoService.buscarPorNombre("Pepsi"));
     }
 
+    // Caso exitoso: buscar por precio devuelve lista
     @Test
     void cuandoBuscarPorPrecio_entoncesRetornaLista() {
         List<Producto> productos = Arrays.asList(producto);
@@ -110,6 +118,7 @@ class ProductoServiceTest {
         assertEquals("Coca Cola", resultado.get(0).getNombre());
     }
 
+    // Caso exitoso: buscar por categoría devuelve lista
     @Test
     void cuandoBuscarPorCategoria_entoncesRetornaLista() {
         List<Producto> productos = Arrays.asList(producto);
@@ -124,6 +133,7 @@ class ProductoServiceTest {
 
     // ------------------- OBTENER TODOS -------------------
 
+    // Caso exitoso: obtener todos los productos
     @Test
     void cuandoObtenerTodos_entoncesRetornaLista() {
         List<Producto> productos = Arrays.asList(producto);
@@ -138,6 +148,7 @@ class ProductoServiceTest {
 
     // ------------------- ACTUALIZAR -------------------
 
+    // Caso exitoso: actualizar producto existente
     @Test
     void cuandoActualizarProductoExistente_entoncesPersiste() {
         when(productoRepository.existsById(1L)).thenReturn(true);
@@ -150,6 +161,7 @@ class ProductoServiceTest {
         verify(productoRepository).save(producto);
     }
 
+    // Caso error: actualizar producto inexistente lanza excepción
     @Test
     void cuandoActualizarProductoInexistente_entoncesLanzaExcepcion() {
         when(productoRepository.existsById(99L)).thenReturn(false);
@@ -159,6 +171,7 @@ class ProductoServiceTest {
 
     // ------------------- ELIMINAR -------------------
 
+    // Caso exitoso: eliminar producto existente
     @Test
     void cuandoEliminarProductoExistente_entoncesElimina() {
         when(productoRepository.existsById(1L)).thenReturn(true);
@@ -168,6 +181,7 @@ class ProductoServiceTest {
         verify(productoRepository).deleteById(1L);
     }
 
+    // Caso error: eliminar producto inexistente lanza excepción
     @Test
     void cuandoEliminarProductoInexistente_entoncesLanzaExcepcion() {
         when(productoRepository.existsById(99L)).thenReturn(false);
