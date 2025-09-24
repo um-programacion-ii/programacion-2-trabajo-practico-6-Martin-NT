@@ -15,6 +15,8 @@ public class Inventario {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    // Relación uno a uno con la entidad Producto.
+    // Cada producto tiene un inventario asociado.
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "producto_id")
     private Producto producto;

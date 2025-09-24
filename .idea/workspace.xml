@@ -5,9 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="08bee568-14cd-499c-8e05-31d51d8884e5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/businessService/src/main/java/com/TP6/businessService/exception/GlobalExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dataService/src/main/java/com/TP6/dataService/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/businessService/src/main/java/com/TP6/businessService/client/DataServiceClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/businessService/src/main/java/com/TP6/businessService/client/DataServiceClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/businessService/src/main/java/com/TP6/businessService/controller/BusinessController.java" beforeDir="false" afterPath="$PROJECT_DIR$/businessService/src/main/java/com/TP6/businessService/controller/BusinessController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/businessService/src/main/java/com/TP6/businessService/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/businessService/src/main/java/com/TP6/businessService/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/businessService/src/test/java/com/TP6/businessService/client/DataServiceClientIntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/businessService/src/test/java/com/TP6/businessService/client/DataServiceClientIntegrationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/businessService/src/test/java/com/TP6/businessService/controller/BusinessControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/businessService/src/test/java/com/TP6/businessService/controller/BusinessControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/businessService/src/test/java/com/TP6/businessService/service/CategoriaBusinessServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/businessService/src/test/java/com/TP6/businessService/service/CategoriaBusinessServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/businessService/src/test/java/com/TP6/businessService/service/InventarioBusinessServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/businessService/src/test/java/com/TP6/businessService/service/InventarioBusinessServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/businessService/src/test/java/com/TP6/businessService/service/ProductoBusinessServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/businessService/src/test/java/com/TP6/businessService/service/ProductoBusinessServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataService/src/main/java/com/TP6/dataService/DataServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/dataService/src/main/java/com/TP6/dataService/DataServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataService/src/main/java/com/TP6/dataService/entity/Inventario.java" beforeDir="false" afterPath="$PROJECT_DIR$/dataService/src/main/java/com/TP6/dataService/entity/Inventario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataService/src/main/java/com/TP6/dataService/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/dataService/src/main/java/com/TP6/dataService/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataService/src/main/java/com/TP6/dataService/service/CategoriaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/dataService/src/main/java/com/TP6/dataService/service/CategoriaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataService/src/main/java/com/TP6/dataService/service/InventarioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/dataService/src/main/java/com/TP6/dataService/service/InventarioService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataService/src/main/java/com/TP6/dataService/service/ProductoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/dataService/src/main/java/com/TP6/dataService/service/ProductoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataService/src/test/java/com/TP6/dataService/controller/DataControllerIntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/dataService/src/test/java/com/TP6/dataService/controller/DataControllerIntegrationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataService/src/test/java/com/TP6/dataService/service/CategoriaServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/dataService/src/test/java/com/TP6/dataService/service/CategoriaServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataService/src/test/java/com/TP6/dataService/service/InventarioServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/dataService/src/test/java/com/TP6/dataService/service/InventarioServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataService/src/test/java/com/TP6/dataService/service/ProductoServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/dataService/src/test/java/com/TP6/dataService/service/ProductoServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,29 +57,123 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "feature/global-exception-handler",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/marteen/Documentos/UM/Programacion-II/programacion-2-trabajo-practico-6-Martin-NT",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JUnit.BusinessControllerTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CategoriaBusinessServiceTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CategoriaServiceTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.DataControllerIntegrationTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.DataServiceClientIntegrationTest (1).executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.DataServiceClientIntegrationTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.InventarioBusinessServiceTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.InventarioServiceTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ProductoBusinessServiceTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ProductoServiceTest.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/communication-tests&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/marteen/Documentos/UM/Programacion-II/programacion-2-trabajo-practico-6-Martin-NT&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.annotationProcessors&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/dataService/src/main/resources" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.TP6.businessService.client" />
+      <recent name="com.TP6.businessService" />
+    </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.BusinessServiceApplication">
+  <component name="RunManager" selected="JUnit.DataServiceClientIntegrationTest (1)">
+    <configuration name="BusinessControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="businessService" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.TP6.businessService.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.TP6.businessService.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.TP6.businessService.controller.BusinessControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CategoriaServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="dataService" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.TP6.dataService.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.TP6.dataService.service" />
+      <option name="MAIN_CLASS_NAME" value="com.TP6.dataService.service.CategoriaServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DataServiceClientIntegrationTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="businessService" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.TP6.businessService.client.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.TP6.businessService.client" />
+      <option name="MAIN_CLASS_NAME" value="com.TP6.businessService.client.DataServiceClientIntegrationTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DataServiceClientIntegrationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="businessService" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.TP6.businessService.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.TP6.businessService" />
+      <option name="MAIN_CLASS_NAME" value="com.TP6.businessService.DataServiceClientIntegrationTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InventarioServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="dataService" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.TP6.dataService.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.TP6.dataService.service" />
+      <option name="MAIN_CLASS_NAME" value="com.TP6.dataService.service.InventarioServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="BusinessServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="businessService" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.TP6.businessService.BusinessServiceApplication" />
@@ -75,6 +188,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.DataServiceClientIntegrationTest (1)" />
+        <item itemvalue="JUnit.BusinessControllerTest" />
+        <item itemvalue="JUnit.DataServiceClientIntegrationTest" />
+        <item itemvalue="JUnit.InventarioServiceTest" />
+        <item itemvalue="JUnit.CategoriaServiceTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -93,7 +215,12 @@
       <updated>1758036392953</updated>
       <workItem from="1758036394483" duration="11016000" />
       <workItem from="1758143090250" duration="11400000" />
-      <workItem from="1758204365864" duration="6998000" />
+      <workItem from="1758204365864" duration="7370000" />
+      <workItem from="1758226301508" duration="7539000" />
+      <workItem from="1758291789375" duration="5789000" />
+      <workItem from="1758545282440" duration="6192000" />
+      <workItem from="1758661715942" duration="4697000" />
+      <workItem from="1758718108586" duration="3308000" />
     </task>
     <servers />
   </component>

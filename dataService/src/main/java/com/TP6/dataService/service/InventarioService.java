@@ -1,4 +1,5 @@
 package com.TP6.dataService.service;
+
 import com.TP6.dataService.entity.Inventario;
 import com.TP6.dataService.exception.InventarioNoEncontradoException;
 import com.TP6.dataService.repository.InventarioRepository;
@@ -23,6 +24,7 @@ public class InventarioService {
     }
 
     // Busca un inventario por su ID
+    // Lanza excepción si no existe
     public Inventario buscarPorId(Long id) {
         return inventarioRepository.findById(id)
                 .orElseThrow(() ->
@@ -30,23 +32,24 @@ public class InventarioService {
     }
 
     // Busca el inventario asociado a un producto por su ID
+    // Lanza excepción si no se encuentra
     public Inventario buscarPorProducto(Long productoId) {
         return inventarioRepository.findByProductoId(productoId)
                 .orElseThrow(() ->
                         new InventarioNoEncontradoException("Inventario no encontrado para el producto con ID " + productoId));
     }
 
-    // Devuelve todos los inventarios con una cantidad exacta
+    // Devuelve todos los inventarios que tienen una cantidad exacta
     public List<Inventario> buscarPorCantidad(Integer cantidad) {
         return inventarioRepository.findByCantidad(cantidad);
     }
 
-    // Devuelve inventarios cuyo stock es menor o igual al stock mínimo configurado
+    // Devuelve inventarios con stock menor o igual al stock mínimo configurado
     public List<Inventario> buscarConStockBajo() {
         return inventarioRepository.findConStockBajo();
     }
 
-    // Devuelve inventarios cuyo stock es mayor al stock mínimo configurado
+    // Devuelve inventarios con stock mayor al stock mínimo configurado
     public List<Inventario> buscarConStockAlto() {
         return inventarioRepository.findConStockAlto();
     }
@@ -56,7 +59,8 @@ public class InventarioService {
         return inventarioRepository.findAll();
     }
 
-    // Actualiza un inventario existente (sobrescribe datos con el ID dado)
+    // Actualiza un inventario existente
+    // Valida que exista por ID y actualiza la fecha de modificación
     public Inventario actualizar(Long id, Inventario inventario) {
         if (!inventarioRepository.existsById(id)) {
             throw new InventarioNoEncontradoException("El Inventario con ID " + id + " no ha sido encontrado");
@@ -67,6 +71,7 @@ public class InventarioService {
     }
 
     // Elimina un inventario existente por su ID
+    // Lanza excepción si no existe
     public void eliminar(Long id) {
         if (!inventarioRepository.existsById(id)) {
             throw new InventarioNoEncontradoException("El Inventario con ID " + id + " no existe");
