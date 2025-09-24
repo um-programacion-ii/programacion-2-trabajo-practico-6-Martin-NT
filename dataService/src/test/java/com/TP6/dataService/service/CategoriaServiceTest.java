@@ -22,15 +22,16 @@ import static org.mockito.Mockito.*;
 class CategoriaServiceTest {
 
     @Mock
-    private CategoriaRepository categoriaRepository;
+    private CategoriaRepository categoriaRepository; // Simulamos el repositorio
 
     @InjectMocks
-    private CategoriaService categoriaService;
+    private CategoriaService categoriaService; // Service bajo prueba
 
     private Categoria categoria;
 
     @BeforeEach
     void setUp() {
+        // Creamos categoría de prueba
         categoria = new Categoria();
         categoria.setId(1L);
         categoria.setNombre("Bebidas");
@@ -39,6 +40,7 @@ class CategoriaServiceTest {
 
     // ------------------- GUARDAR -------------------
 
+    // Caso exitoso: guardar categoría válida
     @Test
     void cuandoGuardarCategoriaValida_entoncesPersiste() {
         when(categoriaRepository.findByNombre("Bebidas")).thenReturn(Optional.empty());
@@ -51,6 +53,7 @@ class CategoriaServiceTest {
         verify(categoriaRepository).save(categoria);
     }
 
+    // Caso error: guardar categoría duplicada lanza excepción
     @Test
     void cuandoGuardarCategoriaDuplicada_entoncesLanzaExcepcion() {
         when(categoriaRepository.findByNombre("Bebidas")).thenReturn(Optional.of(categoria));
@@ -62,6 +65,7 @@ class CategoriaServiceTest {
 
     // ------------------- BUSCAR -------------------
 
+    // Caso exitoso: buscar por ID existente
     @Test
     void cuandoBuscarPorIdExistente_entoncesRetornaCategoria() {
         when(categoriaRepository.findById(1L)).thenReturn(Optional.of(categoria));
@@ -72,6 +76,7 @@ class CategoriaServiceTest {
         assertEquals("Bebidas", resultado.getNombre());
     }
 
+    // Caso error: buscar por ID inexistente lanza excepción
     @Test
     void cuandoBuscarPorIdNoExistente_entoncesLanzaExcepcion() {
         when(categoriaRepository.findById(99L)).thenReturn(Optional.empty());
@@ -79,6 +84,7 @@ class CategoriaServiceTest {
         assertThrows(CategoriaNoEncontradaException.class, () -> categoriaService.buscarPorId(99L));
     }
 
+    // Caso exitoso: buscar por nombre existente
     @Test
     void cuandoBuscarPorNombreExistente_entoncesRetornaCategoria() {
         when(categoriaRepository.findByNombre("Bebidas")).thenReturn(Optional.of(categoria));
@@ -89,6 +95,7 @@ class CategoriaServiceTest {
         assertEquals("Bebidas", resultado.getNombre());
     }
 
+    // Caso error: buscar por nombre inexistente lanza excepción
     @Test
     void cuandoBuscarPorNombreNoExistente_entoncesLanzaExcepcion() {
         when(categoriaRepository.findByNombre("Alimentos")).thenReturn(Optional.empty());
@@ -96,6 +103,7 @@ class CategoriaServiceTest {
         assertThrows(CategoriaNoEncontradaException.class, () -> categoriaService.buscarPorNombre("Alimentos"));
     }
 
+    // Caso exitoso: buscar categorías con productos asociados
     @Test
     void cuandoBuscarCategoriasConProductos_entoncesRetornaLista() {
         List<Categoria> categorias = Arrays.asList(categoria);
@@ -110,6 +118,7 @@ class CategoriaServiceTest {
 
     // ------------------- OBTENER TODOS -------------------
 
+    // Caso exitoso: obtener todas las categorías
     @Test
     void cuandoObtenerTodos_entoncesRetornaLista() {
         List<Categoria> categorias = Arrays.asList(categoria);
@@ -124,6 +133,7 @@ class CategoriaServiceTest {
 
     // ------------------- ACTUALIZAR -------------------
 
+    // Caso exitoso: actualizar categoría existente
     @Test
     void cuandoActualizarCategoriaExistente_entoncesPersiste() {
         when(categoriaRepository.existsById(1L)).thenReturn(true);
@@ -136,6 +146,7 @@ class CategoriaServiceTest {
         verify(categoriaRepository).save(categoria);
     }
 
+    // Caso error: actualizar categoría inexistente lanza excepción
     @Test
     void cuandoActualizarCategoriaInexistente_entoncesLanzaExcepcion() {
         when(categoriaRepository.existsById(99L)).thenReturn(false);
@@ -145,6 +156,7 @@ class CategoriaServiceTest {
 
     // ------------------- ELIMINAR -------------------
 
+    // Caso exitoso: eliminar categoría existente
     @Test
     void cuandoEliminarCategoriaExistente_entoncesElimina() {
         when(categoriaRepository.existsById(1L)).thenReturn(true);
@@ -154,6 +166,7 @@ class CategoriaServiceTest {
         verify(categoriaRepository).deleteById(1L);
     }
 
+    // Caso error: eliminar categoría inexistente lanza excepción
     @Test
     void cuandoEliminarCategoriaInexistente_entoncesLanzaExcepcion() {
         when(categoriaRepository.existsById(99L)).thenReturn(false);

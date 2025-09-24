@@ -27,6 +27,9 @@ class CategoriaBusinessServiceTest {
     @InjectMocks
     private CategoriaBusinessService categoriaBusinessService; // Service que probamos
 
+    // ------------------- TESTS OBTENER -------------------
+
+    // Caso exitoso: obtiene todas las categorías
     @Test
     void cuandoObtenerTodasLasCategorias_entoncesRetornaLista() {
         // Arrange → simulamos lista de categorías
@@ -45,6 +48,9 @@ class CategoriaBusinessServiceTest {
         verify(dataServiceClient).obtenerTodasLasCategorias();
     }
 
+    // ------------------- TESTS CREAR -------------------
+
+    // Caso exitoso: crea una categoría válida
     @Test
     void cuandoCrearCategoriaValida_entoncesSeCreaCorrectamente() {
         // Arrange
@@ -61,6 +67,7 @@ class CategoriaBusinessServiceTest {
         verify(dataServiceClient).crearCategoria(nueva);
     }
 
+    // Caso error: nombre vacío lanza ValidacionNegocioException
     @Test
     void cuandoCrearCategoriaConNombreVacio_entoncesLanzaExcepcion() {
         // Arrange → nombre vacío
@@ -75,6 +82,9 @@ class CategoriaBusinessServiceTest {
         verify(dataServiceClient, never()).crearCategoria(any());
     }
 
+    // ------------------- TESTS BUSCAR -------------------
+
+    // Caso error: categoría por ID inexistente lanza CategoriaNoEncontradaException
     @Test
     void cuandoObtenerCategoriaPorIdInexistente_entoncesLanzaCategoriaNoEncontradaException() {
         // Arrange → simulamos 404 NotFound
@@ -87,6 +97,7 @@ class CategoriaBusinessServiceTest {
         });
     }
 
+    // Caso error: categoría por nombre inexistente lanza CategoriaNoEncontradaException
     @Test
     void cuandoObtenerCategoriaPorNombreInexistente_entoncesLanzaCategoriaNoEncontradaException() {
         // Arrange → simulamos 404 NotFound
@@ -99,6 +110,9 @@ class CategoriaBusinessServiceTest {
         });
     }
 
+    // ------------------- TESTS ERRORES GENERALES -------------------
+
+    // Caso error: fallo en comunicación con data-service
     @Test
     void cuandoObtenerCategorias_yDataServiceFalla_entoncesLanzaMicroserviceCommunicationException() {
         // Arrange → simulamos error genérico
@@ -111,3 +125,4 @@ class CategoriaBusinessServiceTest {
         });
     }
 }
+

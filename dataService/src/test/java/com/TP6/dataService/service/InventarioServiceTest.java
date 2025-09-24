@@ -22,15 +22,16 @@ import static org.mockito.Mockito.*;
 class InventarioServiceTest {
 
     @Mock
-    private InventarioRepository inventarioRepository;
+    private InventarioRepository inventarioRepository; // Simulamos el repositorio
 
     @InjectMocks
-    private InventarioService inventarioService;
+    private InventarioService inventarioService; // Service bajo prueba
 
     private Inventario inventario;
 
     @BeforeEach
     void setUp() {
+        // Creamos un inventario de prueba
         inventario = new Inventario();
         inventario.setId(1L);
         inventario.setCantidad(10);
@@ -40,6 +41,7 @@ class InventarioServiceTest {
 
     // ------------------- GUARDAR -------------------
 
+    // Caso exitoso: guardar inventario válido
     @Test
     void cuandoGuardarInventarioValido_entoncesPersiste() {
         when(inventarioRepository.save(inventario)).thenReturn(inventario);
@@ -53,6 +55,7 @@ class InventarioServiceTest {
 
     // ------------------- BUSCAR -------------------
 
+    // Caso exitoso: buscar por ID existente
     @Test
     void cuandoBuscarPorIdExistente_entoncesRetornaInventario() {
         when(inventarioRepository.findById(1L)).thenReturn(Optional.of(inventario));
@@ -63,6 +66,7 @@ class InventarioServiceTest {
         assertEquals(10, resultado.getCantidad());
     }
 
+    // Caso error: buscar por ID inexistente lanza excepción
     @Test
     void cuandoBuscarPorIdNoExistente_entoncesLanzaExcepcion() {
         when(inventarioRepository.findById(99L)).thenReturn(Optional.empty());
@@ -70,6 +74,7 @@ class InventarioServiceTest {
         assertThrows(InventarioNoEncontradoException.class, () -> inventarioService.buscarPorId(99L));
     }
 
+    // Caso exitoso: buscar inventario por producto existente
     @Test
     void cuandoBuscarPorProductoExistente_entoncesRetornaInventario() {
         when(inventarioRepository.findByProductoId(1L)).thenReturn(Optional.of(inventario));
@@ -80,6 +85,7 @@ class InventarioServiceTest {
         assertEquals(10, resultado.getCantidad());
     }
 
+    // Caso error: buscar inventario por producto inexistente lanza excepción
     @Test
     void cuandoBuscarPorProductoNoExistente_entoncesLanzaExcepcion() {
         when(inventarioRepository.findByProductoId(99L)).thenReturn(Optional.empty());
@@ -87,6 +93,7 @@ class InventarioServiceTest {
         assertThrows(InventarioNoEncontradoException.class, () -> inventarioService.buscarPorProducto(99L));
     }
 
+    // Caso exitoso: buscar por cantidad devuelve lista
     @Test
     void cuandoBuscarPorCantidad_entoncesRetornaLista() {
         List<Inventario> inventarios = Arrays.asList(inventario);
@@ -98,6 +105,7 @@ class InventarioServiceTest {
         assertEquals(10, resultado.get(0).getCantidad());
     }
 
+    // Caso exitoso: buscar inventarios con stock bajo
     @Test
     void cuandoBuscarConStockBajo_entoncesRetornaLista() {
         List<Inventario> inventarios = Arrays.asList(inventario);
@@ -108,6 +116,7 @@ class InventarioServiceTest {
         assertEquals(1, resultado.size());
     }
 
+    // Caso exitoso: buscar inventarios con stock alto
     @Test
     void cuandoBuscarConStockAlto_entoncesRetornaLista() {
         List<Inventario> inventarios = Arrays.asList(inventario);
@@ -118,6 +127,7 @@ class InventarioServiceTest {
         assertEquals(1, resultado.size());
     }
 
+    // Caso exitoso: obtener todos los inventarios
     @Test
     void cuandoObtenerTodos_entoncesRetornaLista() {
         List<Inventario> inventarios = Arrays.asList(inventario);
@@ -131,6 +141,7 @@ class InventarioServiceTest {
 
     // ------------------- ACTUALIZAR -------------------
 
+    // Caso exitoso: actualizar inventario existente
     @Test
     void cuandoActualizarInventarioExistente_entoncesPersiste() {
         when(inventarioRepository.existsById(1L)).thenReturn(true);
@@ -143,6 +154,7 @@ class InventarioServiceTest {
         verify(inventarioRepository).save(inventario);
     }
 
+    // Caso error: actualizar inventario inexistente lanza excepción
     @Test
     void cuandoActualizarInventarioNoExistente_entoncesLanzaExcepcion() {
         when(inventarioRepository.existsById(99L)).thenReturn(false);
@@ -152,6 +164,7 @@ class InventarioServiceTest {
 
     // ------------------- ELIMINAR -------------------
 
+    // Caso exitoso: eliminar inventario existente
     @Test
     void cuandoEliminarInventarioExistente_entoncesElimina() {
         when(inventarioRepository.existsById(1L)).thenReturn(true);
@@ -161,6 +174,7 @@ class InventarioServiceTest {
         verify(inventarioRepository).deleteById(1L);
     }
 
+    // Caso error: eliminar inventario inexistente lanza excepción
     @Test
     void cuandoEliminarInventarioNoExistente_entoncesLanzaExcepcion() {
         when(inventarioRepository.existsById(99L)).thenReturn(false);

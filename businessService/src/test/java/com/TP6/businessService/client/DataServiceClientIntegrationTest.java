@@ -37,12 +37,14 @@ class DataServiceClientIntegrationTest {
 
     // ------------------- PRODUCTOS -------------------
 
+    // Caso exitoso: obtiene un producto por ID
     @Test
     void obtenerProductoPorId_cuando200_devuelveDTO() throws Exception {
         var dto = new ProductoDTO(1L, "Coca Cola", "Bebida",
                 BigDecimal.valueOf(100), "Bebidas", 10, false);
         var json = objectMapper.writeValueAsString(dto);
 
+        // Simula respuesta del data-service
         stubFor(get(urlPathEqualTo("/data/productos/id/1"))
                 .willReturn(okJson(json)));
 
@@ -53,6 +55,7 @@ class DataServiceClientIntegrationTest {
         verify(getRequestedFor(urlPathEqualTo("/data/productos/id/1")));
     }
 
+    // Caso de error: producto no encontrado (404)
     @Test
     void obtenerProductoPorId_cuando404_lanzaFeignNotFound() {
         stubFor(get(urlPathEqualTo("/data/productos/id/999"))
@@ -65,6 +68,7 @@ class DataServiceClientIntegrationTest {
         verify(getRequestedFor(urlPathEqualTo("/data/productos/id/999")));
     }
 
+    // Caso exitoso: crear un producto
     @Test
     void crearProducto_enviaJsonYDevuelveDTO() throws Exception {
         var req = new ProductoRequest("Notebook", "14 pulgadas",
@@ -88,6 +92,7 @@ class DataServiceClientIntegrationTest {
 
     // ------------------- CATEGORÍAS -------------------
 
+    // Caso exitoso: obtiene categoría por ID
     @Test
     void obtenerCategoriaPorId_cuando200_devuelveDTO() throws Exception {
         var dto = new CategoriaDTO(1L, "Bebidas", "Líquidos");
@@ -103,6 +108,7 @@ class DataServiceClientIntegrationTest {
         verify(getRequestedFor(urlPathEqualTo("/data/categorias/id/1")));
     }
 
+    // Caso exitoso: crear categoría
     @Test
     void crearCategoria_enviaJsonYDevuelveDTO() throws Exception {
         var req = new CategoriaDTO(null, "Snacks", "Productos secos");
@@ -123,6 +129,7 @@ class DataServiceClientIntegrationTest {
 
     // ------------------- INVENTARIO -------------------
 
+    // Caso exitoso: obtiene inventario por ID
     @Test
     void obtenerInventarioPorId_cuando200_devuelveDTO() throws Exception {
         var producto = new ProductoDTO(1L, "Coca Cola", "Bebida",
@@ -140,6 +147,7 @@ class DataServiceClientIntegrationTest {
         assertEquals("Coca Cola", res.getProducto().getNombre());
     }
 
+    // Caso exitoso: crear inventario
     @Test
     void crearInventario_enviaJsonYDevuelveDTO() throws Exception {
         var producto = new ProductoDTO(1L, "Coca Cola", "Bebida",
