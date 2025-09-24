@@ -17,7 +17,7 @@ public interface DataServiceClient {
     @GetMapping("/data/productos")
     List<ProductoDTO> obtenerTodosLosProductos();
 
-    @GetMapping("/data/productos/{id}")
+    @GetMapping("/data/productos/id/{id}")
     ProductoDTO obtenerProductoPorId(@PathVariable Long id);
 
     @GetMapping("/data/productos/nombre/{nombre}")
@@ -45,7 +45,7 @@ public interface DataServiceClient {
     @GetMapping("/data/categorias")
     List<CategoriaDTO> obtenerTodasLasCategorias();
 
-    @GetMapping("/data/categorias/{id}")
+    @GetMapping("/data/categorias/id/{id}")
     CategoriaDTO obtenerCategoriaPorId(@PathVariable Long id);
 
     @GetMapping("/data/categorias/nombre/{nombre}")
