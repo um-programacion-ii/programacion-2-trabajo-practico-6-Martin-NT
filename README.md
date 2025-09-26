@@ -157,122 +157,367 @@ cd programacion-2-trabajo-practico-6
 
 ### Compilar los Microservicios
 #### Data Service
+Debes ubicarte en la carpeta dataService
 ```bash
 cd dataService
+```
+Para poder compilar
+```bash
 mvn clean install
 ```
 #### Business Service
+Debes ubicarte en la carpeta businessService
 ```bash
 cd ../businessService
+```
+Para poder compilar
+```bash
 mvn clean install
 ```
-## 🚀 Ejecución de la Aplicación
-### 🐳 Instrucciones para Docker
-Hay dos opciones para ejecutar el sistema.
 
-#### 🔹 Desarrollo Local (Híbrido)
-##### Levantar Bases de Datos
+## 🐳 Instrucciones para Docker
+
+### Levantar Bases de Datos
 Desde la raíz del proyecto:
+- Levantar MySQL y PostgreSQL
 ```bash
-# Levantar MySQL y PostgreSQL
 docker compose up -d mysql postgres
-
-# Verificar que los contenedores estén corriendo
+```
+- Verificar que los contenedores estén corriendo
+```bash
 docker compose ps
-
-# Ver logs de los contenedores
+```
+- Ver logs de los contenedores
+```bash
 docker compose logs -f
 ```
-##### Ejecutar los Microservicios con Maven
-- Con H2 (no requiere Docker):
-```bash
-# Terminal 1 - Data Service
-cd dataService
-mvn spring-boot:run -Dspring-boot.run.profiles=dev
-```
-```bash
-# Terminal 2 - Business Service
-cd businessService
-mvn spring-boot:run -Dspring-boot.run.profiles=dev
-```
-- Con MySQL (requiere Docker):
-```bash
-# Terminal 1 - Data Service
-cd dataService
-mvn spring-boot:run -Dspring-boot.run.profiles=mysql
-```
-```bash
-# Terminal 2 - Business Service
-cd businessService
-mvn spring-boot:run -Dspring-boot.run.profiles=mysql
-```
-- Con PostgreSQL (requiere Docker):
-```bash
-# Terminal 1 - Data Service
-cd dataService
-mvn spring-boot:run -Dspring-boot.run.profiles=postgres
-```
-```bash
-# Terminal 2 - Business Service
-cd businessService
-mvn spring-boot:run -Dspring-boot.run.profiles=postgres
-```
 
-#### 🔹 Ecosistema Completo con Docker (Todo en uno)
-Esta opción esta buena para probar el sistema completo tal como funcionaría en un entorno de producción.
-Docker construye las imágenes y levanta microservicios + bases de datos con un solo comando.
-
-##### Levantar todo el sistema
+### Detener Bases de Datos
+- Detener contenedores
 ```bash
-# Para MySQL
-SPRING_PROFILES_ACTIVE=mysql docker compose up --build
-```
-```bash
-# Para PostgreSQL
-SPRING_PROFILES_ACTIVE=postgres docker compose up --build
-```
-##### Detener todos los contenedores
-```bash
-# Detener contenedores
 docker compose down
 ```
+- Detener y eliminar volúmenes
 ```bash
-# Detener y eliminar volúmenes (datos)
 docker compose down -v
 ```
+
 ## 🧪 Ejecutar Tests
-- Data Service
+### Data Service
+Te ubicas en la carpeta:
 ```bash
 cd dataService
+```
+Ejecutas los test:
+```bash
 mvn test
 ```
-- Business Service
+### Business Service
+Te ubicas en la carpeta:
 ```bash
 cd businessService
+```
+Ejecutas los test:
+```bash
 mvn test
+```
+
+## 🚀 Ejecución de la Aplicación
+
+### Con H2 (no requiere Docker):
+Abris una terminal y te ubicas:
+```bash
+# Terminal 1 - Data Service
+cd dataService
+```
+Luego ejecutas:
+```bash
+mvn spring-boot:run -Dspring-boot.run.profiles=dev
+```
+Despues abris una segunda terminal y te ubicas en:
+```bash
+# Terminal 2 - Business Service
+cd businessService
+```
+Luego ejecutas:
+```bash
+mvn spring-boot:run -Dspring-boot.run.profiles=dev
+```
+### Con MySQL (requiere Docker):
+_Requiere haber hecho los pasos de Docker previos_
+Abris una terminal y te ubicas en:
+```bash
+# Terminal 1 - Data Service
+cd dataService
+```
+Luego ejecutas:
+```bash
+mvn spring-boot:run -Dspring-boot.run.profiles=mysql
+```
+Despues abris una segunda terminal y te ubicas en:
+```bash
+# Terminal 2 - Business Service
+cd businessService
+```
+Luego ejecutas:
+```bash
+mvn spring-boot:run -Dspring-boot.run.profiles=mysql
+```
+### Con PostgreSQL (requiere Docker):
+_Requiere haber hecho los pasos de Docker previos_
+Abris una terminal y te ubicas en:
+```bash
+# Terminal 1 - Data Service
+cd dataService
+```
+Luego ejecutas:
+```bash
+mvn spring-boot:run -Dspring-boot.run.profiles=postgres
+```
+Despues abris una segunda terminal y te ubicas en:
+```bash
+# Terminal 2 - Business Service
+cd businessService
+```
+Luego ejecutas:
+```bash
+mvn spring-boot:run -Dspring-boot.run.profiles=postgres
 ```
 
 ## 📮 Documentación de Endpoints
 ### 🔹 Microservicio de Datos (data-service)
-| Método | Endpoint                             | Descripción                    |
-| ------ | ------------------------------------ | ------------------------------ |
-| GET    | `/data/productos`                    | Lista todos los productos      |
-| GET    | `/data/productos/{id}`               | Obtiene producto por ID        |
-| POST   | `/data/productos`                    | Crea un nuevo producto         |
-| PUT    | `/data/productos/{id}`               | Actualiza un producto          |
-| DELETE | `/data/productos/{id}`               | Elimina un producto            |
-| GET    | `/data/productos/categoria/{nombre}` | Busca productos por categoría  |
-| GET    | `/data/inventario/stock-bajo`        | Lista productos con stock bajo |
+| Método | Endpoint                                 | Descripción                                     |
+| ------ | ---------------------------------------- | ----------------------------------------------- |
+| GET    | `/data/productos`                        | Lista todos los productos                       |
+| GET    | `/data/productos/id/{id}`                | Obtiene un producto por ID                      |
+| GET    | `/data/productos/nombre/{nombre}`        | Obtiene un producto por nombre                  |
+| GET    | `/data/productos/precio/{precio}`        | Busca productos por precio exacto               |
+| GET    | `/data/productos/categoria/{nombre}`     | Busca productos por categoría                   |
+| POST   | `/data/productos`                        | Crea un nuevo producto                          |
+| PUT    | `/data/productos/{id}`                   | Actualiza un producto existente                 |
+| DELETE | `/data/productos/{id}`                   | Elimina un producto                             |
+| GET    | `/data/productos/stock-bajo`             | Lista productos con stock bajo                  |
+| GET    | `/data/categorias`                       | Lista todas las categorías                      |
+| GET    | `/data/categorias/id/{id}`               | Obtiene una categoría por ID                    |
+| GET    | `/data/categorias/nombre/{nombre}`       | Obtiene una categoría por nombre                |
+| GET    | `/data/categorias/con-productos`         | Lista categorías que tienen productos asociados |
+| POST   | `/data/categorias`                       | Crea una nueva categoría                        |
+| PUT    | `/data/categorias/{id}`                  | Actualiza una categoría existente               |
+| DELETE | `/data/categorias/{id}`                  | Elimina una categoría                           |
+| GET    | `/data/inventario`                       | Lista todos los inventarios                     |
+| GET    | `/data/inventario/{id}`                  | Obtiene un inventario por ID                    |
+| GET    | `/data/inventario/producto/{productoId}` | Obtiene inventario asociado a un producto       |
+| GET    | `/data/inventario/cantidad/{cantidad}`   | Lista inventarios con cantidad exacta           |
+| GET    | `/data/inventario/stock-bajo`            | Lista inventarios con stock bajo                |
+| GET    | `/data/inventario/stock-alto`            | Lista inventarios con stock alto                |
+| POST   | `/data/inventario`                       | Crea un nuevo inventario                        |
+| PUT    | `/data/inventario/{id}`                  | Actualiza un inventario existente               |
+| DELETE | `/data/inventario/{id}`                  | Elimina un inventario                           |
 
 ### 🔹 Microservicio de Negocio (business-service)
-| Método | Endpoint                            | Descripción                                  |
-| ------ | ----------------------------------- | -------------------------------------------- |
-| GET    | `/api/productos`                    | Lista todos los productos (via Feign)        |
-| GET    | `/api/productos/{id}`               | Obtiene producto por ID                      |
-| POST   | `/api/productos`                    | Crea un producto con validaciones de negocio |
-| GET    | `/api/productos/categoria/{nombre}` | Filtra productos por categoría               |
-| GET    | `/api/reportes/stock-bajo`          | Consulta productos con stock bajo            |
-| GET    | `/api/reportes/valor-inventario`    | Calcula valor total del inventario           |
+| Método | Endpoint                                | Descripción                                       |
+| ------ | --------------------------------------- | ------------------------------------------------- |
+| GET    | `/api/productos`                        | Lista todos los productos (con reglas de negocio) |
+| GET    | `/api/productos/id/{id}`                | Obtiene un producto por ID                        |
+| GET    | `/api/productos/nombre/{nombre}`        | Obtiene un producto por nombre                    |
+| GET    | `/api/productos/precio/{precio}`        | Busca productos por precio exacto                 |
+| POST   | `/api/productos`                        | Crea un producto con validaciones de negocio      |
+| PUT    | `/api/productos/{id}`                   | Actualiza un producto existente                   |
+| DELETE | `/api/productos/{id}`                   | Elimina un producto                               |
+| GET    | `/api/productos/categoria/{nombre}`     | Filtra productos por categoría                    |
+| GET    | `/api/categorias`                       | Lista todas las categorías                        |
+| GET    | `/api/categorias/{id}`                  | Obtiene una categoría por ID                      |
+| GET    | `/api/categorias/nombre/{nombre}`       | Obtiene una categoría por nombre                  |
+| GET    | `/api/categorias/con-productos`         | Lista categorías con productos asociados          |
+| POST   | `/api/categorias`                       | Crea una nueva categoría                          |
+| PUT    | `/api/categorias/{id}`                  | Actualiza una categoría existente                 |
+| DELETE | `/api/categorias/{id}`                  | Elimina una categoría                             |
+| GET    | `/api/inventario`                       | Lista todos los inventarios                       |
+| GET    | `/api/inventario/{id}`                  | Obtiene un inventario por ID                      |
+| GET    | `/api/inventario/producto/{productoId}` | Obtiene inventario de un producto                 |
+| GET    | `/api/inventario/cantidad/{cantidad}`   | Lista inventarios con cantidad exacta             |
+| GET    | `/api/inventario/stock-bajo`            | Lista inventarios con stock bajo                  |
+| GET    | `/api/inventario/stock-alto`            | Lista inventarios con stock alto                  |
+| POST   | `/api/inventario`                       | Crea un nuevo inventario                          |
+| PUT    | `/api/inventario/{id}`                  | Actualiza un inventario existente                 |
+| DELETE | `/api/inventario/{id}`                  | Elimina un inventario                             |
+| GET    | `/api/reportes/stock-bajo`              | Reporte de productos con stock bajo               |
+| GET    | `/api/reportes/valor-inventario`        | Calcula el valor total del inventario             |
+
+## 📊 Ejemplos de Uso
+Los siguientes ejemplos muestran cómo interactuar con los endpoints del sistema.  
+Recordá que la base de datos a utilizar depende del **perfil activo**:
+
+- `dev` → H2 (memoria, ideal para pruebas rápidas)
+- `mysql` → MySQL (requiere contenedor levantado)
+- `postgres` → PostgreSQL (requiere contenedor levantado)
+
+En todos los casos, el **Business Service** se expone en el puerto **8082** y el **Data Service** en el puerto **8081**.
+
+### 🔹 Productos
+#### 1. Crear un producto
+```bash
+curl -X POST http://localhost:8082/api/productos \
+   -H "Content-Type: application/json" \
+   -d '{
+         "nombre": "Laptop Gamer",
+         "descripcion": "16GB RAM, RTX 3060",
+         "precio": 2500.00,
+         "categoria": "Tecnología",
+         "cantidad": 5,
+         "stockMinimo": 2
+       }'
+```
+#### 2. Listar todos los productos
+```bash
+curl http://localhost:8082/api/productos
+```
+
+#### 3. Obtener un producto por ID
+```bash
+curl http://localhost:8082/api/productos/id/1
+
+```
+
+#### 4. Actualizar un producto
+```bash
+curl -X PUT http://localhost:8082/api/productos/1 \
+   -H "Content-Type: application/json" \
+   -d '{
+         "nombre": "Laptop Gamer Pro",
+         "descripcion": "32GB RAM, RTX 4080",
+         "precio": 4500.00,
+         "categoria": "Tecnología",
+         "cantidad": 3,
+         "stockMinimo": 1
+       }'
+```
+#### 5. Eliminar un producto
+```bash
+curl -X DELETE http://localhost:8082/api/productos/1
+```
+
+### 🔹 Categorías
+#### 1. Crear una categoría
+```bash
+curl -X POST http://localhost:8081/data/categorias \
+   -H "Content-Type: application/json" \
+   -d '{
+         "nombre": "Tecnología"
+       }'
+
+```
+
+#### 2. Listar categorías
+```bash
+curl http://localhost:8081/data/categorias
+```
+
+#### 3. Obtener categoría por ID
+```bash
+curl http://localhost:8081/data/categorias/1
+```
+
+### 🔹 Inventario
+#### 1. Listar todos los inventarios
+```bash
+curl http://localhost:8082/api/inventario
+```
+
+#### 2. Obtener inventario por ID
+```bash
+curl http://localhost:8082/api/inventario/1
+```
+
+#### 3. Obtener inventario asociado a un producto
+```bash
+curl http://localhost:8082/api/inventario/producto/1
+```
+
+#### 4. Obtener inventarios por cantidad exacta
+```bash
+curl http://localhost:8082/api/inventario/cantidad/10
+```
+
+#### 5. Crear un inventario
+```bash
+curl -X POST http://localhost:8082/api/inventario    -H "Content-Type: application/json"    -d '{
+         "productoId": 1,
+         "cantidad": 15,
+         "stockMinimo": 5
+       }'
+```
+
+#### 6. Actualizar un inventario existente
+```bash
+curl -X PUT http://localhost:8082/api/inventario/1    -H "Content-Type: application/json"    -d '{
+         "productoId": 1,
+         "cantidad": 20,
+         "stockMinimo": 8
+       }'
+```
+
+#### 7. Eliminar un inventario
+```bash
+curl -X DELETE http://localhost:8082/api/inventario/1
+```
+
+#### 8. Consultar inventarios con stock bajo
+```bash
+curl http://localhost:8082/api/inventario/stock-bajo
+```
+
+#### 9. Consultar inventarios con stock alto
+```bash
+curl http://localhost:8082/api/inventario/stock-alto
+```
+
+#### 10. Consultar productos con stock bajo (reporte)
+```bash
+curl http://localhost:8082/api/reportes/stock-bajo
+```
+
+#### 11. Calcular valor total del inventario (reporte)
+```bash
+curl http://localhost:8082/api/reportes/valor-inventario
+```
+
+## 🧪 Pruebas Realizadas
+Para validar el correcto funcionamiento de los microservicios se realizaron distintas pruebas, organizadas en la carpeta pruebas/.
+```bash
+pruebas/
+├── docker/
+│   ├── levantar-verificar.png
+│   └── verLogs.png
+├── profiles/
+│   ├── h2/
+│   │   ├── 1_levantar-data.png
+│   │   └── 2_levantar-business.png
+│   ├── mysql/
+│   │   ├── levantar-data.png
+│   │   └── levantar-business.png
+│   └── postgres/
+│       ├── levantar-data.png
+│       └── levantar-business.png
+├── ejemplosDeUso/
+│   ├── producto/
+│   │   ├── crear-producto.png
+│   │   ├── listar-productos.png
+│   │   ├── productoPorId.png
+│   │   ├── actualizar-producto.png
+│   │   └── eliminar-producto.png
+│   ├── categoria/
+│   │   ├── crear-categoria.png
+│   │   ├── listar-categorias.png
+│   │   ├── categoriaPorId.png
+│   │   ├── actualizar-categoria.png
+│   │   └── eliminar-categoria.png
+│   └── inventario/
+│       └── pruebas.png
+└── tests/
+    ├── businessService.png
+    └── dataService.png
+```
 
 ## 📊 Casos de Uso del Sistema
 
