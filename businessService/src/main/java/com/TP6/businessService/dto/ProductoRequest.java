@@ -1,0 +1,19 @@
+package com.TP6.businessService.dto;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.math.BigDecimal;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class ProductoRequest {
+    private String nombre;
+    private String descripcion;
+    private BigDecimal precio;
+    private Long categoriaId;
+    private Integer stock; // stock inicial del producto
+    private Integer stockMinimo; // mínimo permitido antes de considerarse bajo
+}
